@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Inter"; /*a name to be used later*/
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap"); /*URL to font*/
+}
+
+.NavMenu {
+  margin-top: 1vh;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  .NavList {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+    border-radius: 40px;
+    height: 2%;
+    width: 390px;
+    .NavItem {
+      font-family: Inter;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  .NavItem:hover {
+    cursor: pointer;
+    color: blueviolet;
+  }
+
+  .Separator {
+    border-left: 2px solid #c8c8c8;
+    height: 20px;
+  }
+
+  .Login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100px;
+    height: 2%;
+    position: fixed;
+    left: 90%;
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+    border-radius: 40px;
+    gap: 5px;
+    p {
+      font-family: Inter;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+  .Login:hover {
+    cursor: pointer;
+    color: blueviolet;
+  }
+}

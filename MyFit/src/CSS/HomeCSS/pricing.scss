@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Inter"; /*a name to be used later*/
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap"); /*URL to font*/
+}
+.pricing-container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title-container {
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-weight: 600;
+    }
+    h3 {
+      font-weight: 300;
+    }
+  }
+  .switch-container {
+  }
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 1%;
+    .card {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      width: 320px;
+      height: auto;
+      padding: 20px;
+      border: 1px solid #c8c8c8;
+      border-radius: 10px;
+      padding-top: 2%;
+      padding: 2%;
+      .card-title {
+        font-family: Inter;
+        h1 {
+          font-size: 30px;
+          font-weight: 700;
+        }
+        h2 {
+          width: auto;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+      .card-price {
+        margin-top: 10%;
+        font-family: Inter;
+        .price {
+          font-size: 32px;
+          font-weight: 700;
+        }
+        .card-type {
+          font-size: 12px;
+        }
+      }
+      .card-features {
+        margin-top: 10%;
+        font-family: Inter;
+        p {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        li {
+          margin-top: 3%;
+          font-weight: 300;
+        }
+        li::before {
+          margin-right: 5%;
+          font-size: 24px;
+          font-weight: 800;
+        }
+        ul,
+        li::before {
+          padding: 0;
+          content: "\2713\0020";
+
+          list-style-type: none;
+        }
+      }
+      .card-btn-overlay {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .card-btn {
+          font-family: Inter;
+          width: auto;
+          background-color: #000;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
