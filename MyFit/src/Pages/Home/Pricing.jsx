@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Card from "../../Components/Pricing/Card";
 import Axios from "axios";
+import $ from "jquery";
 import "../../CSS/HomeCSS/pricing.scss";
+import { json } from "react-router-dom";
 
 export default function Pricing() {
   const [pricingService, setPricingService] = useState([]);
+  const colors = ["#E4E4E7", "#F59E0B", "#10B981", "#AA0BF5"]; //Palette colori card
 
+  //Fetch piani
   useEffect(() => {
-    Axios.get("https://localhost:7169/api/Plan/getAll").then((response) => {
-      setPricingService(response.data);
-    });
+    Axios.get("https://localhost:7169/api/Plan/getAll")
+      .then((response) => {
+        setPricingService(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
-
-  console.log(pricingService);
 
   return (
     <div className="pricing-container">
@@ -22,36 +28,26 @@ export default function Pricing() {
       </div>
       <div className="switch-container"></div>
 
-      <div className="card-container">
-        <Card
-          title={"Free"}
-          type={"Best for personal use"}
-          price={0}
-          benefit={["0", "1", "2", "3", "4", "5"]}
-          color={"#A1A1AA"}
-        />
-        <Card
-          title={"Basic"}
-          type={"Best for personal use"}
-          price={8}
-          benefit={["0", "1", "2", "3", "4", "5"]}
-          color={"#F59E0B"}
-        />
-        <Card
-          title={"Premium"}
-          type={"Best for personal use"}
-          price={16}
-          benefit={["0", "1", "2", "3", "4", "5"]}
-          color={"#10B981"}
-        />
-        <Card
-          title={"Advance"}
-          type={"Best for enterprise"}
-          price={200}
-          benefit={["0", "1", "2", "3", "4", "5"]}
-          color={"#AA0BF5"}
-        />
-      </div>
+      {pricingService.length > 0 && (
+        <div className="card-container">
+          {pricingService.map((ps) => (
+            <Card
+              title={ps.name}
+              type={ps.name}
+              price={ps.price}
+              benefit={ps.description.split(",")}
+              color={colors[ps.id - 1]}
+            />
+          ))}
+          <Card
+            title={"Advance"}
+            type={"Best for enterprise"}
+            price={200}
+            benefit={["0", "1", "2", "3", "4", "5"]}
+            color={"#AA0BF5"}
+          />
+        </div>
+      )}
     </div>
   );
 }
