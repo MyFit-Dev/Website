@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import "../../CSS/HomeCSS/pricing.scss";
 
 export default function Card({ title, type, price, benefit, color }) {
-  let i = 0;
   const itemsList = benefit.map((items) => (
     <li key={Math.random()}>{items}</li>
   ));
@@ -23,7 +22,7 @@ export default function Card({ title, type, price, benefit, color }) {
       </div>
 
       <div className="card-features">
-        <p>Cosa troverai:</p>
+        <p>Benefici:</p>
 
         <ul>{itemsList}</ul>
       </div>

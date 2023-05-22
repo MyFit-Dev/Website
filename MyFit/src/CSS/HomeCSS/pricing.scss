@@ -3,7 +3,8 @@
   src: url(../../assets/Inter.ttf); /*URL to font*/
 }
 .pricing-container {
-  height: 100vh;
+  padding: 10%;
+  height: auto;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     h2 {
       font-weight: 600;
     }
@@ -29,6 +31,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100vw;
     gap: 1%;
     .card {
@@ -36,7 +39,8 @@
       display: flex;
       flex-direction: column;
       align-items: left;
-      width: 18vw;
+      width: 350px;
+      min-width: 250px;
       height: auto;
       padding: 20px;
       border: 1px solid #c8c8c8;
@@ -86,7 +90,6 @@
         li::before {
           padding: 0;
           content: "\2713\0020";
-
           list-style-type: none;
         }
       }
