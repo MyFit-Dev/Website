@@ -10,7 +10,7 @@ export default function Card({ title, type, price, benefit, color }) {
   return (
     <div
       className="card"
-      style={{ borderTopColor: color, borderTopWidth: "4px" }}
+      style={{ borderTopColor: color, borderTopWidth: "5px" }}
     >
       <div className="card-title">
         <h1>{title}</h1>

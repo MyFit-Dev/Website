@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Inter"; /*a name to be used later*/
+  src: url(../../assets/Inter.ttf); /*URL to font*/
+}
+.footbar {
+  font-family: Inter;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 1%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background-color: #000;
+
+  img {
+    height: 60%;
+    width: auto;
+  }
+  .footbar-top {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    .footbar-top-container {
+      padding: 1%;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      gap: 9%;
+      align-items: center;
+      justify-content: center;
+      .footer-top-container-item {
+        width: auto;
+        height: 100%;
+        padding: 1%;
+        ul {
+          padding: 0;
+          width: 100%;
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 1vw;
+          h2 {
+            width: 1005;
+            margin-bottom: 2vw;
+          }
+          #no:hover {
+            cursor: text;
+            color: #666;
+          }
+          li {
+            cursor: pointer;
+            color: #666;
+            span {
+              color: #fff;
+            }
+          }
+          li:hover {
+            color: #ddd;
+          }
+        }
+
+        .social {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          gap: 10%;
+          .social-icon {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20%;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    color: #ddd;
+    width: 90%;
+  }
+  .footbar-bottom {
+    color: #ddd;
+    font-weight: 400;
+  }
+}

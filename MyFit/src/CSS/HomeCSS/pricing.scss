@@ -3,7 +3,7 @@
   src: url(../../assets/Inter.ttf); /*URL to font*/
 }
 .pricing-container {
-  padding: 10%;
+  margin: 10%;
   height: auto;
   width: auto;
   display: flex;
@@ -23,8 +23,6 @@
     h3 {
       font-weight: 300;
     }
-  }
-  .switch-container {
   }
   .card-container {
     display: flex;

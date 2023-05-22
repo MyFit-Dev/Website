@@ -7,7 +7,6 @@ import { json } from "react-router-dom";
 
 export default function Pricing() {
   const [pricingService, setPricingService] = useState([]);
-  const colors = ["#E4E4E7", "#F59E0B", "#10B981", "#AA0BF5"]; //Palette colori card
 
   //Fetch piani
   useEffect(() => {
@@ -33,19 +32,12 @@ export default function Pricing() {
           {pricingService.map((ps) => (
             <Card
               title={ps.name}
-              type={ps.name}
+              type={ps.subtitle}
               price={ps.price}
               benefit={ps.description.split(",")}
-              color={colors[ps.id - 1]}
+              color={ps.color}
             />
           ))}
-          <Card
-            title={"Advance"}
-            type={"Best for enterprise"}
-            price={200}
-            benefit={["0", "1", "2", "3", "4", "5"]}
-            color={"#AA0BF5"}
-          />
         </div>
       )}
     </div>
